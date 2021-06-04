@@ -58,7 +58,7 @@ while i == 1:
             ip = input("Enter IP Address: ")
         if ip == "127.0.0.1":
             print("Loopback detected, please enter a valid IP Address")
-            os.system("pause")
+            sys.stdin.read(1)
             sys.exit()
         endpoint = f"https://scamalytics.com/ip/{ip}"
         IPresult = validIPAddress(f"{ip}")
@@ -95,5 +95,5 @@ except:
         
 
 
-os.system('pause')
+sys.stdin.read(1)
 sys.exit()
